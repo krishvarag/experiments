@@ -7,13 +7,13 @@
 * [https://github.com/Mirantis/kubeadm-dind-cluster](https://github.com/Mirantis/kubeadm-dind-cluster)
 
 ### Tools
-[gcloud] (https://cloud.google.com/sdk/gcloud/)
-[minikube] (https://kubernetes.io/docs/getting-started-guides/minikube/)
-[kubeadm] (https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/)
-[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+* [gcloud] (https://cloud.google.com/sdk/gcloud/)
+* [minikube] (https://kubernetes.io/docs/getting-started-guides/minikube/)
+* [kubeadm] (https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/)
+* [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 ### DIND 
- [Docker In Docker](https://hub.docker.com/_/docker/)
- [https://github.com/jpetazzo/dind](https://github.com/jpetazzo/dind)
+* [Docker In Docker](https://hub.docker.com/_/docker/)
+* [https://github.com/jpetazzo/dind](https://github.com/jpetazzo/dind)
  ```
 cd dind/
 docker build -t dind .
