@@ -1,10 +1,17 @@
 ## Kubernetes
 * [getting-started-guides/docker.html] [http://jeffmendoza.github.io/kubernetes/v1.0/docs/getting-started-guides/docker.html]
 * [https://kubernetes.io/docs/tutorials/kubernetes-basics/] (https://kubernetes.io/docs/tutorials/kubernetes-basics/)
-
+* [Cloud Native Computing Foundation Projects] (https://www.cncf.io/projects/)
+* [Github Kubernetes] (https://github.com/kubernetes)
 #  kubeadm-dind-cluster
 * [https://github.com/Mirantis/kubeadm-dind-cluster](https://github.com/Mirantis/kubeadm-dind-cluster)
-* DIND 
+
+### Tools
+[gcloud] (https://cloud.google.com/sdk/gcloud/)
+[minikube] (https://kubernetes.io/docs/getting-started-guides/minikube/)
+[kubeadm] (https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/)
+[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+### DIND 
  [Docker In Docker](https://hub.docker.com/_/docker/)
  [https://github.com/jpetazzo/dind](https://github.com/jpetazzo/dind)
  ```
