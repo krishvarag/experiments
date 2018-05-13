@@ -1,6 +1,8 @@
+### Topics
+[Installation]
+[KUBELET] [kube-apiserver ] [kube-scheduler] [kube-controller-manager] [etcd]
+##  Intstllation 
 
-
-==   CMDS
 ```
 sysctl --system
 yum install -y kubelet
@@ -134,4 +136,90 @@ as root:
   kubeadm join 192.168.1.4:6443 --token 0g6z3i.qftjsfb994lp787g --discovery-token-ca-cert-hash sha256:7c25a714cd4572906bec9e8a5dd7b867bd8c94314a052ddff21af32f533abb6c
 
 
+```
+### kubelet
+```
+/usr/bin/kubelet 
+--bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf 
+--kubeconfig=/etc/kubernetes/kubelet.conf 
+--pod-manifest-path=/etc/kubernetes/manifests 
+--allow-privileged=true 
+--network-plugin=cni 
+--cni-conf-dir=/etc/cni/net.d 
+--cni-bin-dir=/opt/cni/bin 
+--cluster-dns=10.96.0.10 
+--cluster-domain=cluster.local 
+--authorization-mode=Webhook 
+--client-ca-file=/etc/kubernetes/pki/ca.crt 
+--cadvisor-port=0 
+--cgroup-driver=cgroupfs 
+--rotate-certificates=true 
+--cert-dir=/var/lib/kubelet/pki 
+--fail-swap-on=false
+```
+### kube-apiserver
+```
+kube-apiserver 
+--service-account-key-file=/etc/kubernetes/pki/sa.pub 
+--kubelet-client-key=/etc/kubernetes/pki/apiserver-kubelet-client.key 
+--insecure-port=0 
+--admission-control=NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,DefaultTolerationSeconds,
+NodeRestriction,MutatingAdmissionWebhook,ValidatingAdmissionWebhook,ResourceQuota 
+--allow-privileged=true 
+--requestheader-allowed-names=front-proxy-client 
+--proxy-client-key-file=/etc/kubernetes/pki/front-proxy-client.key 
+--tls-private-key-file=/etc/kubernetes/pki/apiserver.key 
+--kubelet-client-certificate=/etc/kubernetes/pki/apiserver-kubelet-client.crt 
+--secure-port=6443 
+--requestheader-client-ca-file=/etc/kubernetes/pki/front-proxy-ca.crt 
+--service-cluster-ip-range=10.96.0.0/12 
+--tls-cert-file=/etc/kubernetes/pki/apiserver.crt 
+--enable-bootstrap-token-auth=true 
+--kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname 
+--requestheader-group-headers=X-Remote-Group 
+--requestheader-extra-headers-prefix=X-Remote-Extra- 
+--requestheader-username-headers=X-Remote-User 
+--advertise-address=192.168.1.4 
+--client-ca-file=/etc/kubernetes/pki/ca.crt 
+--proxy-client-cert-file=/etc/kubernetes/pki/front-proxy-client.crt 
+--authorization-mode=Node,RBAC 
+--etcd-servers=https://127.0.0.1:2379 
+--etcd-cafile=/etc/kubernetes/pki/etcd/ca.crt 
+--etcd-certfile=/etc/kubernetes/pki/apiserver-etcd-client.crt 
+--etcd-keyfile=/etc/kubernetes/pki/apiserver-etcd-client.key
+```
+### kube-scheduler
+```
+--address=127.0.0.1 
+--leader-elect=true
+```
+
+### kube-controller-manager
+```
+kube-controller-manager 
+--use-service-account-credentials=true 
+--kubeconfig=/etc/kubernetes/controller-manager.conf 
+--root-ca-file=/etc/kubernetes/pki/ca.crt 
+--service-account-private-key-file=/etc/kubernetes/pki/sa.key 
+--cluster-signing-key-file=/etc/kubernetes/pki/ca.key 
+--address=127.0.0.1 
+--leader-elect=true 
+--controllers=*,bootstrapsigner,tokencleaner 
+--cluster-signing-cert-file=/etc/kubernetes/pki/ca.crt
+```
+
+### etcd 
+```
+etcd 
+--peer-trusted-ca-file=/etc/kubernetes/pki/etcd/ca.crt 
+--advertise-client-urls=https://127.0.0.1:2379 
+--data-dir=/var/lib/etcd 
+--cert-file=/etc/kubernetes/pki/etcd/server.crt 
+--trusted-ca-file=/etc/kubernetes/pki/etcd/ca.crt 
+--peer-key-file=/etc/kubernetes/pki/etcd/peer.key 
+--listen-client-urls=https://127.0.0.1:2379 
+--client-cert-auth=true 
+--peer-client-cert-auth=true 
+--key-file=/etc/kubernetes/pki/etcd/server.key 
+--peer-cert-file=/etc/kubernetes/pki/etcd/peer.crt
 ```
