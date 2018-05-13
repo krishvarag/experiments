@@ -223,3 +223,12 @@ etcd
 --key-file=/etc/kubernetes/pki/etcd/server.key 
 --peer-cert-file=/etc/kubernetes/pki/etcd/peer.crt
 ```
+### Misc
+```
+
+kubectl -n kube-system get secret
+kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml
+kubectl -n kube-system get secret
+kubectl -n kube-system describe secret replicaset-controller-token-m7957
+
+```
