@@ -2,7 +2,7 @@
 [Installation]
 [KUBELET] [kube-apiserver ] [kube-scheduler] [kube-controller-manager] [etcd]
 ##  Intstllation 
-
+[kubeadm installation](https://kubernetes.io/docs/setup/independent/install-kubeadm/)
 ```
 sysctl --system
 yum install -y kubelet
