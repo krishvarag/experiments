@@ -30,6 +30,7 @@ id -u haproxy &> /dev/null || useradd -s /usr/sbin/nologin -r haproxy
 
 ## Enabling as service 
 * Copy the following template as /usr/lib/systemd/haproxy.service
+```
 [Unit]
 Description=HAProxy Load Balancer
 Documentation=man:haproxy(1)
