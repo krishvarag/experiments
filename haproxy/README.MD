@@ -10,7 +10,7 @@ yum install gcc pcre-static pcre-devel -y
 wget //www.haproxy.org/download/1.8/src/haproxy-1.8.17.tar.gz
 tar xzvf haproxy-1.8.17.tar.gz
 cd haproxy-1.8.17
-make TARGET=linux2628
+make TARGET=linux2628 USE_LINUX_TPROXY=1 USE_ZLIB=1 USE_REGPARM=1 USE_OPENSSL=1 USE_PCRE=1
 # the build generates haproxy executable
 ```
 
@@ -29,7 +29,7 @@ id -u haproxy &> /dev/null || useradd -s /usr/sbin/nologin -r haproxy
 ```
 
 ## Enabling as service 
-* Copy the following template as /usr/lib/systemd/haproxy.service
+* Copy the following template as /lib/systemd/haproxy.service
 ```
 [Unit]
 Description=HAProxy Load Balancer
@@ -54,11 +54,11 @@ Restart=always
 Type=forking
 
 [Install]
-WantedBy=multi-user.target```
+WantedBy=multi-user.target
 
 ```
 ```
-sudo chmod 755 /usr/lib/systemd/haproxy.service
+sudo chmod 755 /lib/systemd/haproxy.service
 sudo systemctl daemon-reload
 ```
 # Running as service 
