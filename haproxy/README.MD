@@ -2,7 +2,7 @@
 
 ## Build environment
 ```
-yum install gcc pcre-static pcre-devel -y
+yum install -y  gcc pcre-static pcre-devel openssl-devel 
 ```
 ## Haproxy Source Build
 * [Source](http://www.haproxy.org/download/)
