@@ -7,7 +7,7 @@ yum install -y  gcc pcre-static pcre-devel openssl-devel
 ## Haproxy Source Build
 * [Source](http://www.haproxy.org/download/)
 ```
-wget //www.haproxy.org/download/1.8/src/haproxy-1.8.17.tar.gz
+wget http://www.haproxy.org/download/1.8/src/haproxy-1.8.17.tar.gz
 tar xzvf haproxy-1.8.17.tar.gz
 cd haproxy-1.8.17
 make TARGET=linux2628 USE_LINUX_TPROXY=1 USE_ZLIB=1 USE_REGPARM=1 USE_OPENSSL=1 USE_PCRE=1
