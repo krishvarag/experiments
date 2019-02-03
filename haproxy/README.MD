@@ -57,7 +57,7 @@ Type=forking
 WantedBy=multi-user.target```
 
 ```
-``
+```
 sudo chmod 755 /usr/lib/systemd/haproxy.service
 sudo systemctl daemon-reload
 ```
