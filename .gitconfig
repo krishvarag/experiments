@@ -1,0 +1,26 @@
+[user]
+        name = user_changeme 
+        email = user_changeme@email.com
+[alias]
+        lg = log --pretty=format:'%h %p %ad %s' --graph
+        lg1 = log --pretty=format:'%h %p %ad %s'
+[http]
+        proxy = http://changeme
+        sslCAInfo = <additional cert>
+
+[http "https://change_gitserver.com"]
+        proxy=  https://my_proxy.com 
+        sslverify = false
+[core]
+        ignorecase = true
+        filemode = false
+        pager = cat
+        autocrlf = true        
+[color]
+        ui = auto
+[credential]
+#        helper = wincred  
+#        Windows Wincred
+#        Wincred  Network address (git:https://change_gitserver.com)
+	    helper = store --file ~/.git-credentials
+#  https://user:id@gitserver.com
