@@ -1,8 +1,20 @@
 ## Install Mysql Community Server
 
 ```
+wget https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
+sudo yum localinstall mysql57-community-release-el7-9.noarch.rpm
+
+# yum repolist enabled | grep "mysql.*-community.*"
+mysql-connectors-community/x86_64                      MySQL Connectors C     95
+mysql-tools-community/x86_64                           MySQL Tools Commun     84
+mysql57-community/x86_64                               MySQL 5.7 Communit    327
+#  yum repolist all | grep mysql
+yum-config-manager --disable mysql56-community
+yum-config-manager --enable  mysql57-community
+
 wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-community-server-5.7.25-1.el7.x86_64.rpm
-sudo rpm  -ivh mysql-community-server-5.7.24-1.el7.x86_64.rpm
+;sudo rpm  -ivh mysql-community-server-5.7.24-1.el7.x86_64.rpm
+yum localhostinstall mysql-community-server-5.7.24-1.el7.x86_64.rpm
 # remove default Maria db config
 sudo yum -y remove mariadb-config
 # install mysql community server
