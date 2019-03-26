@@ -51,3 +51,7 @@ create database t1;
 grant all privileges on t1.* to  't1'@'%' identified by 'set_my_password';
 flush privileges;
 ```
+* Create Database Backup
+```
+mysqldump -h 	[server] -u [user]  -p$(PWD) -P [port]  --databases [db_name]  > db_name.sql 
+```
