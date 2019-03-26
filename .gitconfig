@@ -24,3 +24,6 @@
 #        Wincred  Network address (git:https://change_gitserver.com)
 	    helper = store --file ~/.git-credentials
 #  https://user:id@gitserver.com
+
+
+#git config -l --show-origin 
