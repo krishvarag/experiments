@@ -29,6 +29,7 @@ select Host,User,Show_db_priv  from user;
 ```
 use mysql
 update user set authentication_string=PASSWORD("changeme") where User='root';
+update user set Password=PASSWORD("changeme") where User='root';
 flush privileges;
 ```
 
