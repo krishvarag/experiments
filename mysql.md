@@ -21,8 +21,15 @@ sudo yum -y remove mariadb-config
 yum -y install mysql-community-server
 systemctl start mysqld.service
 systemctl enable mysqld.service
-
 ```
+**Install option 2**
+```
+sudo -E wget https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm 
+sudo yum -y localinstall mysql57-community-release-el7-11.noarch.rpm 
+sudo -E yum -y install mysql-community-server 
+sudo -E yum -y install mysql 
+```
+
 * Get Server version
 ```
   use mysql
@@ -43,6 +50,14 @@ use mysql
 update user set authentication_string=PASSWORD("changeme") where User='root';
 update user set Password=PASSWORD("changeme") where User='root';
 flush privileges;
+```
+**use weak password**
+```
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'strong_pwd'; 
+FLUSH PRIVILEGES;  
+uninstall plugin validate_password;
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'weak_pwd'; 
+FLUSH PRIVILEGES;
 ```
 
 * Create DB T1 and give access to T1 
