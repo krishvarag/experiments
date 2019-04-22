@@ -3,6 +3,7 @@
 ## Build environment
 ```
 yum install -y  gcc pcre-static pcre-devel openssl-devel 
+sudo yum install -y  openssl-devel-1.0.2k
 ```
 ## Haproxy Source Build
 * [Source](http://www.haproxy.org/download/)
