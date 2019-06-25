@@ -26,11 +26,11 @@ sudo ln -s /usr/local/sbin/haproxy /usr/sbin/haproxy
 
 ## Create haproxy user
 ```
-id -u haproxy &> /dev/null || useradd -s /usr/sbin/nologin -r haproxy 
+id -u haproxy &> /dev/null || sudo useradd -s /usr/sbin/nologin -r haproxy 
 ```
 
 ## Enabling as service 
-* Copy the following template as /lib/systemd/haproxy.service
+* Copy the following template as /lib/systemd/system/haproxy.service
 ```
 [Unit]
 Description=HAProxy Load Balancer
@@ -59,11 +59,11 @@ WantedBy=multi-user.target
 
 ```
 ```
-sudo chmod 755 /lib/systemd/haproxy.service
+sudo chmod 755 /lib/systemd/system/haproxy.service
 sudo systemctl daemon-reload
 ```
 # Running as service 
 ```
-systemctl enablle haproxy.service
+systemctl enable haproxy.service
 systemctl start haproxy.service
 ```
