@@ -28,3 +28,17 @@ stemctl enable nomad
 systemctl start nomad
 systemctl status  nomad
 ```
+## Clinet on Second node 
+```
+2 files : 
+# nomad.hcl  ( datacenter + data dir location)
+datacenter = "changeme"
+data_dir = "/opt/nomad"
+# client.hcl
+client {
+  enabled = true
+  servers = ["10.x.y.z:4647"]
+}
+
+ nomad agent -config /etc/nomad.d/
+```
