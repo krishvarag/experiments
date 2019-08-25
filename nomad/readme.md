@@ -1,4 +1,15 @@
 # Nomad cluster setup 
+## Docker install
+```
+yum install -y unzip yum-utils device-mapper-persistent-data lvm2
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+yum install -y docker-ce docker-ce-cli containerd.io
+systemctl enable docker
+systemctl start docker
+# Add additional users to docker group
+usermod -aG docker <add_user>
+```
+## Nomad Cluster creation
 ```
 Download nomad from https://www.nomadproject.io/downloads.html
 nomad -autocomplete-install
