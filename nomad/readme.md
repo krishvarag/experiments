@@ -13,6 +13,11 @@ usermod -aG docker <add_user>
 ```
 Download nomad from https://www.nomadproject.io/downloads.html
 nomad -autocomplete-install
+# create data directory
+mkdir -p /opt/nomad
+# create service entry
+touch /etc/systemd/system/nomad.service
+
 mkdir -p /etc/nomad.d
 chmod700 /etc/nomad.d/
 chmod 700 /etc/nomad.d/
