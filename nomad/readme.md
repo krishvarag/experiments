@@ -42,3 +42,8 @@ client {
 
  nomad agent -config /etc/nomad.d/
 ```
+## Start Consul 
+```
+#
+/consul agent -config-dir=/etc/consul.d/ -bind=x.y.z.1  -advertise=x.y.z.a -ui -client=0.0.0.0
+```
