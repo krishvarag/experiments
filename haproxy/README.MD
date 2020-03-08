@@ -13,8 +13,11 @@ tar xzvf haproxy-1.8.17.tar.gz
 cd haproxy-1.8.17
 make TARGET=linux2628 USE_LINUX_TPROXY=1 USE_ZLIB=1 USE_REGPARM=1 USE_OPENSSL=1 USE_PCRE=1
 # the build generates haproxy executable
-```
+# from version 2.0 use 
+make TARGET=linux-glibc USE_LINUX_TPROXY=1 USE_ZLIB=1 USE_REGPARM=1 USE_OPENSSL=1 USE_PCRE=1
 
+```
+make TARGET=linux2628 USE_LINUX_TPROXY=1 USE_ZLIB=1 USE_REGPARM=1 USE_OPENSSL=1 USE_PCRE=1
 ##  Install haproxy
 ```
 sudo cp haproxy /usr/local/sbin/haproxy
