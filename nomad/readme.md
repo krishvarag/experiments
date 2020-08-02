@@ -28,7 +28,7 @@ stemctl enable nomad
 systemctl start nomad
 systemctl status  nomad
 ```
-## Clinet on Second node 
+## Client on Second node 
 ```
 2 files : 
 # nomad.hcl  ( datacenter + data dir location)
