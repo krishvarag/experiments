@@ -1,7 +1,7 @@
-* [filter_by_ip](#filter)
+* [Filter By IP](#filter-by-ip)
 
-# filter
-** Filter By IP **
+# Filter By IP
+
 ```
 frontend ....
   acl is-blocked-ip src -f /.../ips.txt
