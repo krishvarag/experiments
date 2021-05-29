@@ -8,6 +8,8 @@ frontend ....
   http-request deny if is-blocked-ip
   
 ips.txt
-a.b.c.d  
+a.b.c.d
+192.168.1.0/24
+
 ```
 
