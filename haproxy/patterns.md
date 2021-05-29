@@ -5,6 +5,7 @@
 ```
 frontend ....
   acl is-blocked-ip src -f /.../ips.txt
+  acl is-blocked-ip src 192.168.2.1
   http-request deny if is-blocked-ip
   
 ips.txt
