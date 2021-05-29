@@ -1,4 +1,5 @@
 * [Filter By IP](#filter-by-ip)
+* [Stick Tables](https://www.haproxy.com/blog/introduction-to-haproxy-stick-tables/)
 
 # Filter By IP
 
