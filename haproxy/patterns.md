@@ -1,5 +1,6 @@
 * [Filter By IP](#filter-by-ip)
 * [Stick Tables](https://www.haproxy.com/blog/introduction-to-haproxy-stick-tables/)
+* [Rate Limit](https://www.haproxy.com/blog/four-examples-of-haproxy-rate-limiting/)
 
 # Filter By IP
 
