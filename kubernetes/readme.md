@@ -3,6 +3,8 @@
 * [https://kubernetes.io/docs/tutorials/kubernetes-basics/] (https://kubernetes.io/docs/tutorials/kubernetes-basics/)
 * [Cloud Native Computing Foundation Projects] (https://www.cncf.io/projects/)
 * [Github Kubernetes] (https://github.com/kubernetes)
+* [Learn Kubernetes in a Month of Lunches](https://github.com/sixeyed/kiamol)
+* [courselabs](https://github.com/courselabs/kubernetes)
 #  kubeadm-dind-cluster
 * [https://github.com/Mirantis/kubeadm-dind-cluster](https://github.com/Mirantis/kubeadm-dind-cluster)
 
