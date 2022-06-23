@@ -70,3 +70,5 @@ sudo systemctl daemon-reload
 systemctl enable haproxy.service
 systemctl start haproxy.service
 ```
+## Links
+[HAPROXY PROCESS MGT](https://www.haproxy.com/blog/haproxy-process-management/)
