@@ -26,11 +26,11 @@ trap error_handler EXIT
 # Helper
 function script_details()
 {
-    #echo $0
+	#echo $0
 	echo "*********************************************"
 	PARENT=${0%/*}
 	fn=${0##*/}
-    fn_no_ext=${fn%.*}
+    	fn_no_ext=${fn%.*}
 	echo "Source : $BASH_SOURCE"
 	#echo $(basename $(readlink -nf $0))
 	echo "PID    : $$"
