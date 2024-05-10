@@ -1,3 +1,9 @@
+## General
+* [https://regex101.com/](https://regex101.com/)
+## Python
+* [PYTHEX](https://pythex.org/)
+* [CPython](https://python.org), [PyPy](https://www.pypy.org/features.html) , [https://nuitka.net/](https://nuitka.net/),
+* [pyenv](https://github.com/pyenv/pyenv), [Python In Browser Transcrypt](https://www.transcrypt.org/)
 ## Linux
 
 * [Commands] (http://www.pixelbeat.org/cmdline.html)
